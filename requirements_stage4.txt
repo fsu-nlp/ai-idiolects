@@ -1,0 +1,15 @@
+# Stage-4 (compute-heavy / GPU) extras — NOT needed for the CPU pipeline
+# (Stages 1–3). Installed on the GPU instance on top of requirements.txt.
+# See docs/lambda_setup.md → "Stage 4".
+#
+#   pip install -r requirements.txt -r requirements_stage4.txt
+#   python3 -m spacy download en_core_web_lg
+#
+# `torch` from PyPI bundles CUDA — installs a GPU build on a CUDA host,
+# CPU build otherwise; no extra index URL needed.
+torch
+transformers
+accelerate
+sentence-transformers
+umap-learn
+huggingface_hub

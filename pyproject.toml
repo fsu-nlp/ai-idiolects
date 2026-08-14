@@ -1,0 +1,55 @@
+# Layout: `src/aiidiolects/` is the importable library (the modules other code
+# depends on); `scripts/` holds the run-only command-line entry points, grouped
+# by pipeline step. Install with `pip install -e .` so the scripts can import
+# the library from anywhere — see docs/ANALYSES.md.
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-idiolects"
+version = "1.0.0"
+description = "Generation and analysis pipeline for 'Beyond AI Language: The case for the idiolectal nature of LLM output'"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = ["large language models", "idiolect", "stylometry", "corpus linguistics"]
+authors = [
+    { name = "Karolina Rudnicka" },
+    { name = "Thomas Stephan Juzek" },
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pandas",
+    "openai",
+    "tqdm",
+    "langdetect",
+    "scikit-learn",
+    "spacy",
+    "pillow",
+]
+
+# The spaCy model is not a PyPI package:
+#   python3 -m spacy download en_core_web_lg
+
+[project.optional-dependencies]
+# Stage-4 extras (perplexity scoring, embedding map). GPU-oriented; not needed
+# for Stages 1-3. Mirrors requirements_stage4.txt.
+gpu = [
+    "torch",
+    "transformers",
+    "accelerate",
+    "sentence-transformers",
+    "umap-learn",
+    "huggingface_hub",
+]
+
+[project.urls]
+Repository = "https://github.com/fsu-nlp/ai-idiolects"
+Preprint = "https://arxiv.org/abs/2608.06589"
+
+[tool.setuptools.packages.find]
+where = ["src"]

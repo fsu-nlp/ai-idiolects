@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying chapter."
+title: "ai-idiolects: companion code for 'Beyond AI Language'"
+abstract: >-
+  Generation and analysis pipeline for a study of model-specific linguistic
+  signatures in large language model output, comparing a 2024 cohort of six
+  models against a 2026 cohort of six models on the same prompts.
+type: software
+license: MIT
+repository-code: "https://github.com/fsu-nlp/ai-idiolects"
+authors:
+  - family-names: Rudnicka
+    given-names: Karolina
+    affiliation: "Faculty of Languages, University of Gdańsk, Poland"
+  - family-names: Juzek
+    given-names: Thomas Stephan
+    affiliation: "Department of Scientific Computing, Florida State University, United States"
+preferred-citation:
+  type: article
+  title: "Beyond 'AI Language': The case for the idiolectal nature of LLM output"
+  year: 2026
+  authors:
+    - family-names: Rudnicka
+      given-names: Karolina
+    - family-names: Juzek
+      given-names: Thomas Stephan
+  identifiers:
+    - type: other
+      value: "arXiv:2608.06589"
+      description: arXiv preprint
+  url: "https://arxiv.org/abs/2608.06589"

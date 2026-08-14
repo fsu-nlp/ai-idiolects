@@ -1,0 +1,13 @@
+numpy
+scipy
+matplotlib
+pandas
+openai
+tqdm
+langdetect
+scikit-learn
+spacy
+pillow
+# spaCy model is not a PyPI package — install it separately:
+#   python3 -m spacy download en_core_web_lg
+# Stage-4 (Lambda-GPU) extras are in requirements_stage4.txt.
